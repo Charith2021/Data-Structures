@@ -57,6 +57,19 @@ public class Stack {
         return numbers[numbers.length - 1];
     }
 
+    public boolean contains(int number) {
+        if (empty()) {
+            return false;
+        }
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] == number) {
+                return true;
+            }
+        }
+        return false;
+
+    }
+
 }
 
 

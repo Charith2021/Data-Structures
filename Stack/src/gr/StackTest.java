@@ -7,15 +7,12 @@ public class StackTest {
         stack.push(20);
         stack.push(30);
         stack.push(40);
-       // stack.print();
-      //  stack.pop();
-      //  stack.print();
-        stack.peek();
         stack.print();
-        //stack.empty();
-       // stack.print();
-       // stack.clear();
-        //stack.contains();
+        stack.pop();
+        stack.print();
+        System.out.println(stack.peek());
+        System.out.println(stack.contains(25));
+
 
     }
 
