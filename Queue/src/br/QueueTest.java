@@ -11,6 +11,7 @@ public class QueueTest {
        // queue.pop();
        // queue.print();
         System.out.println(queue.peek());
+        System.out.println(queue.contains(25));
 
     }
 

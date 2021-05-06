@@ -46,4 +46,19 @@ public class Queue {
         return numbers[0];
     }
 
+    public boolean contains(int number) {
+        if (empty()) {
+            return false;
+        }
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] == number) {
+                return true;
+            }
+        }
+        return false;
+
+    }
+
+
+
 }
