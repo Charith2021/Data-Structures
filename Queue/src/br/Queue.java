@@ -21,7 +21,6 @@ public class Queue {
 
 
 
-
     public boolean empty() {
         return numbers == null;
     }
@@ -37,6 +36,14 @@ public class Queue {
             System.out.print(numbers[i] + ", ");
         }
         System.out.println("\b\b]");
+    }
+
+
+    public int peek(){
+        if (empty()){
+            System.err.println("Stack is empty");
+        }
+        return numbers[0];
     }
 
 }
