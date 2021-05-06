@@ -50,6 +50,13 @@ public class Stack {
         System.out.println("\b\b]");
     }
 
+    public int peek(){
+        if (empty()){
+            System.err.println("Stack is empty");
+        }
+        return numbers[numbers.length - 1];
+    }
+
 }
 
 
