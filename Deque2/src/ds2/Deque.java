@@ -1,4 +1,6 @@
 package ds2;
 
-public class Deque {
+import br.Queue;
+
+public class Deque extends Queue {
 }
