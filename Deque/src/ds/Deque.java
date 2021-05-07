@@ -74,10 +74,19 @@ package ds;
 
     }
 
-
-
 }
 
-public class Deque extends Queue{
+public class Deque extends Queue {
 
+
+        enqueueRear(){
+
+
+        }
+
+
+    }
+
+
+   }
 }
