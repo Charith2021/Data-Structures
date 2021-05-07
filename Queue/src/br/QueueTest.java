@@ -8,6 +8,8 @@ public class QueueTest {
         queue.enqueue(30);
         queue.enqueue(40);
         queue.print();
+        queue.dequeue();
+        queue.print();
        // queue.pop();
        // queue.print();
         System.out.println(queue.peek());

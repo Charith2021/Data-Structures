@@ -1,26 +1,27 @@
-package br;
+package ds;
 
 public class Queue {
 
+
     int[] numbers;
 
-    public void enqueue(int number) {
-        if (numbers == null) {
-            numbers = new int[1];
-            numbers[0] = number;
-        } else {
+    public void enqueue(int number){
+        if (this.empty()){
+            this.numbers = new int[1];
+            this.numbers[0] = number;
+        }else{
             int[] temp = new int[numbers.length + 1];
             for (int i = 0; i < numbers.length; i++) {
                 temp[i] = numbers[i];
             }
-            temp[temp.length - 1] = number;
+            temp[temp.length - 1]= number;
             numbers = temp;
         }
     }
 
     public void dequeue(){
-        if (numbers == null){
-            System.err.println("Can't pop from empty array");
+        if (empty()){
+            System.err.println("Can't dequeue from empty queue");
             return;
         }else if (numbers.length == 1){
             numbers = null;
@@ -33,47 +34,47 @@ public class Queue {
         numbers = temp;
     }
 
-
-
-
-    public boolean empty() {
-        return numbers == null;
+    public void clear(){
+        numbers = null;
     }
 
-
-    public void print() {
-        if (empty()) {
+    public void print(){
+        if (empty()){
             System.out.println("[]");
             return;
         }
         System.out.print("[");
-        for (int i = numbers.length - 1; i >= 0; i--) {
+        for (int i = numbers.length - 1; i >=0 ; i--) {
             System.out.print(numbers[i] + ", ");
         }
         System.out.println("\b\b]");
     }
 
-
     public int peek(){
         if (empty()){
-            System.err.println("Stack is empty");
+            throw new RuntimeException("Queue is empty");
         }
-        return numbers[0];
+        return numbers[numbers.length -1];
     }
 
-    public boolean contains(int number) {
-        if (empty()) {
+    public int size(){
+        return empty()? 0: numbers.length;
+    }
+
+    public boolean empty(){
+        return this.numbers == null;
+    }
+
+    public boolean contains(int number){
+        if (empty()){
             return false;
         }
         for (int i = 0; i < numbers.length; i++) {
-            if (numbers[i] == number) {
+            if (numbers[i] == number){
                 return true;
             }
         }
         return false;
-
     }
-
-
 
 }
